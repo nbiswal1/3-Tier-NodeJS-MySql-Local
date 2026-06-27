@@ -57,7 +57,8 @@ First, you need to set up a MySQL server on your local machine.
 4. **Set a password for the root user and update the authentication method:**
 
    ```sql
-   ALTER USER 'root'@'localhost' IDENTIFIED BY 'Test@123';
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'Test@123';
+
    FLUSH PRIVILEGES;
    ```
 
